@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 2mm auto;
+            /* Espacement entre les pages */
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #b4b4cf;
+            padding: 10mm;
+            /* Marges internes de la page */
+            page-break-after: always;
+        }
+
+        .dev-content {
+            padding: 0 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px 5px 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 3mm;
+            background-color: rgb(244, 244, 243);
+            border-bottom-left-radius: 5mm;
+            border-bottom-right-radius: 5mm;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .devoir {
+            width: 100%;
+            margin-bottom: 2mm;
+            display: flex;
+            justify-content: start;
+        }
+
+        .devoir-text {
+            font-weight: bold;
+            margin-top: 0;
+            padding: 1mm 35mm;
+            margin-right: 4mm;
+        }
+
+        .devtitle {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-title {
+            font-weight: 300;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+            font-size: 13px;
+            padding: 10px;
+            border: 1px solid #b4b4cf;
+        }
+
+        .info .info-text {
+            font-weight: bold;
+        }
+
+        .contents {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -3%;
+        }
+
+        .points-box {
+            color: #707070;
+            width: 80px;
+            height: 40px;
+            margin-right: 50px;
+            text-align: center;
+            border: 1px solid #949393;
+            align-items: center;
+        }
+
+        .points-box p {
+            font-weight: bold;
+            color: black;
+            margin-top: 10px;
+        }
+
+        .pare {
+            margin-left: 20%;
+
+            text-align: center;
+            font-style: italic;
+        }
+
+        .question {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .answers img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        .exercice {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+        }
+
+        .points {
+            float: right;
+            padding: 1px 3px;
+            font-weight: normal;
+        }
+
+        .points-exercice {
+            float: right;
+            border: 2px solid #b3d9cd;
+            padding: 1px 15px;
+            font-weight: normal;
+        }
+
+        .section {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .debut {
+            margin-bottom: 10px;
+        }
+
+        .question-number {
+            float: left;
+            width: 30px;
+        }
+
+        .question-content {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-asked {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .options-content {
+            width: 100%;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .options {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .option {
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        .circle {
+            width: 19px;
+            height: 19px;
+            font-family: "POPPINS", sans-serif;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        .math {
+            font-family: "POPPINS", serif;
+            font-style: italic;
+        }
+
+        .page-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            width: 90%;
+            padding-left: 10%;
+        }
+
+        .footer-logo {
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        .page-number {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer p:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .imag-libele {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10mm;
+            page-break-inside: avoid;
+        }
+
+        .imag-libele img {
+            width: 100%;
+            margin-bottom: 10mm;
+        }
+
+        /* Add margin below image to space out content */
+        .question-content img {
+            margin-bottom: 20px;
+        }
+
+        @media print {
+
+            body,
+            .page {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- HEADER STATIC -->
+        <div class="header">
+            <div class="logo">
+                <img src="imges/qrcode.JPG" height="50" width="50" alt="QR Code">
+            </div>
+            <div class="title">
+                <div class="devtitle">
+                    <div class="devoir"><span class="devoir-text">DEVOIR</span></div>
+                    <div class="devoir"><span class="left-title">Matière :</span> MATHEMATIQUES</div>
+                    <div class="devoir"> <span class="left-title">Filière :</span> COMPTABILITE FINANCE</div>
+                </div>
+            </div>
+            <div class="info">
+                <div>Classe :<span class="info-text"> CF1 A</span></div>
+                <div>Durée : <span class="info-text">01 h</span></div>
+                <div>Coefficient : <span class="info-text">1</span></div>
+                <div>ECT : <span class="info-text">C5</span></div>
+            </div>
+        </div>
+
+        <!-- Contenu dynamique ici -->
+        <div id="dynamic-content"></div>
+
+        <!-- FOOTER STATIC -->
+        <div class="footer">
+            <div class="qr-code">
+                <img src="imges/qrcode.JPG" height="70" width="70" alt="QR code">
+                <p>56FFUJGDS</p>
+            </div>
+            <div class="paget">
+                <p>Pigier Côte d'Ivoire l'Université des Métiers</p>
+                <p class="page-number"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // D'abord, on génère le contenu dynamique
+            createDynamicContent();
+
+            // Ensuite, on vérifie si la page dépasse la hauteur limite
+            const pageHeightLimit = 297; // Hauteur de la page en mm (A4 = 297mm)
+            const pages = document.querySelectorAll('.page');
+
+            pages.forEach(page => {
+                const contentHeight = page.scrollHeight / 3.7795275591; // Convertit les pixels en mm (1 mm = 3.7795275591 px)
+
+                if (contentHeight > pageHeightLimit) {
+                    console.log("La page dépasse la hauteur limite.");
+                    handleOverflow(page, pageHeightLimit); // Gestion du débordement
+                }
+            });
+
+            updatePageNumbers(); // Met à jour les numéros de page une première fois
+        });
+
+        function createDynamicContent() {
+            const content = document.getElementById('dynamic-content');
+            const exerciseHTML = `
+            <div class="dev-content">
+                <div class="debut">
+                    <div class="section">EXERCICE 1 <span class="points">(3 pts)</span>
+                        <div class="imag-libele">
+                            <p class="libelle">Soit X une variable aléatoire à valeurs dans {0, 1, 2} et de loi
+                                donnée par P(X = 0) = P(X = 2) = a et P(X = 1) = 1 − 2a où a est une constante réelle.</p>
+                            <img src="imges/WhatsApp Image 2024-08-07 à 22.50.33_e9610ebe.jpg" alt="" height="200" width="auto">
+                        </div>
+                    </div>
+                    <div class="question-content">
+                        <span class="question-asked"><span class="question-number">1 -</span> Quel est le graphe de la fonction de répartition de X parmi les graphes suivants ?<span class="points">(1 pt)</span></span>
+                        <img src="imges/WhatsApp Image 2024-08-07 à 22.50.33_e9610ebe.jpg" alt="" height="200" width="auto">
+                        <ul class="options">
+                            <li class="option"><span class="circle">A</span> Le premier</li>
+                            <li class="option"><span class="circle">B</span> Le second</li>
+                            <li class="option"><span class="circle">C</span> Le troisième</li>
+                            <li class="option"><span class="circle">D</span> Aucun</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">EXERCICE 2 <span class="points">(3 pts)</span>
+                        <div class="imag-libele">
+                            <img src="imges/WhatsApp Image 2024-08-07 à 22.50.33_e9610ebe.jpg" alt="" height="200" width="auto">
+                            <p class="libelle">Soit X une variable aléatoire à valeurs dans {0, 1, 2} et de loi
+                                donnée par P(X = 0) = P(X = 2) = a et P(X = 1) = 1 − 2a où a est une constante réelle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+
+            // Ajout dynamique du contenu
+            if (content) {
+                content.innerHTML = exerciseHTML;
+            } else {
+                console.error("Élément avec l'ID 'dynamic-content' non trouvé.");
+            }
+        }
+
+        function handleOverflow(page, pageHeightLimit) {
+            // Si le contenu dépasse la hauteur limite, on copie le contenu excédentaire vers une nouvelle page
+            const newPage = document.createElement('div');
+            newPage.classList.add('page');
+            document.body.appendChild(newPage);
+
+            updatePageNumbers(); // Mise à jour des numéros de pages après l'ajout
+        }
+
+        function updatePageNumbers() {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach((page, index) => {
+                const pageNumber = page.querySelector('.page-number');
+                if (pageNumber) {
+                    pageNumber.textContent = `Page ${index + 1} sur ${pages.length}`;
+                }
+            });
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
