@@ -1,0 +1,707 @@
+:root {
+  --primary-color: #4A41C5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+/* Global Stylings */
+
+hr{
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.width-24 {
+  width: 24%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.eme{
+  display: flex;
+  justify-content: center;
+}
+
+.display-1{
+  display:flex;
+}
+
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+  width: 50%;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #ABA6F3;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  height: 2rem;
+  background-color: #ABA6F3;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  width: clamp(1px, 100%, 1126px);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.heade{
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: #fff;
+}
+
+
+
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36.5rem;
+}
+
+.btns-end{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+}
+
+.btns-end .btns-group{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5.5rem;
+}
+
+.btnas-end{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+.btn-prev {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  color: var(--primary-color);
+  text-align: center;
+  border: 1px solid #4A41C5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-prev:hover {
+  box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 3px #fff;
+}
+
+
+.Ajouter-question {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: #4A41C5;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #4A41C5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Ajouter-question:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #4A41C5;
+}
+
+
+.Ajouter-section {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: #919BB9;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #919BB9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Ajouter-section:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #4A41C5;
+}
+
+.delete{
+  color: #FF0000;
+}
+
+.fa-regular{
+  margin-left: 3px;
+}
+
+
+
+
+/* Global Styles */
+.wo {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Single column layout */
+  padding: 1rem;
+  gap: 1.5rem; /* Adjust the gap as needed */
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.effect-1,
+.select-effect-1,
+.time-effect-1 {
+  border: none;
+  outline: none;
+  padding-left: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.label {
+  position: absolute;
+  top: -0.75rem;
+  left: 0.4rem;
+  font-size: 1rem;
+  color: #4A41C5;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #4A41C5;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.time-effect-1:focus ~ .placeholder,
+.time-effect-1:not(:placeholder-shown) ~ .placeholder {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* effect 1 */
+.effect-1,
+.select-effect-1,
+.time-effect-1 {
+  border-bottom: 2px solid #8e87f3;
+  /* padding-left: 0; */
+}
+
+.effect-1 + .border,
+.select-effect-1 + .border,
+.time-effect-1 + .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4A41C5;
+  transition: 0.5s;
+}
+
+.effect-1:focus + .border,
+.select-effect-1:focus + .border,
+.time-effect-1:focus + .border {
+  width: 100%;
+}
+
+.effect-1:focus ~ .label,
+.effect-1:not(:placeholder-shown) ~ .label,
+.select-effect-1:focus ~ .label,
+.select-effect-1:not([value=""]) ~ .label,
+.time-effect-1:focus ~ .label,
+.time-effect-1:not(:placeholder-shown) ~ .label {
+  top: -1rem;
+  font-size: 1rem;
+  color: #4A41C5;
+}
+
+/* Additional styles for select element */
+.select-effect-1 {
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For other browsers */
+  padding-right: 1.5rem; /* Space for custom dropdown arrow */
+}
+
+.select-effect-1:focus {
+  outline: none;
+}
+
+/* Custom dropdown arrow for select */
+.select-group::after {
+  content: "\f107"; /* Custom dropdown arrow using FontAwesome */
+  font-family: "Font Awesome 5 Free"; /* Use FontAwesome */
+  font-weight: 900; /* Use solid icons */
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #4A41C5;
+  transition: transform 0.3s ease; /* Animation for arrow */
+}
+
+.select-group .select-effect-1:focus + .border + .label + ::after,
+.select-group .select-effect-1:not([value=""]) + .border + .label + ::after {
+  transform: translateY(-50%) rotate(180deg); /* Rotate arrow on focus */
+}
+
+/* Additional styles for time input */
+.time-effect-1 {
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For other browsers */
+  padding-right: 0.5rem; /* Space for custom time icon */
+}
+
+.time-group::after {
+  font-weight: 900; /* Use solid icons */
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #4A41C5;
+  transition: transform 0.3s ease; /* Animation for clock icon */
+}
+
+.time-group .time-effect-1:focus + .border + .label + ::after,
+.time-group .time-effect-1:not(:placeholder-shown) + .border + .label + ::after {
+  transform: translateY(-50%) rotate(180deg); /* Rotate clock icon on focus */
+}
+
+
+
+.note-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px; /* Espace entre les éléments */
+  padding: 10px;
+  border-radius: 5px;
+}
+.note-container span{
+  font-size: 2rem;
+  color: #4A41C5;
+}
+
+.note-container input{
+  font-size: 2rem;
+  border: 3px solid #4A41C5;
+  border-radius: 8px;
+  width: 23%;
+  height: 68px;
+  text-align: center;
+  background: #F1F4FE;
+  color: #4A41C5;
+}
+
+.note-value {
+  font-weight: bold; /* Texte en gras */
+}
+
+.valid-not {
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color:  #33B801;
+  border-radius: 5px;
+  color: #fff;
+  width: 130px;
+  height: 47px;
+  text-align: center;
+  padding: 15px;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color:  #4A41C5;
+  font-size: 2rem;
+}
+
+.sa{
+  border-top: 8px solid #4A41C5;
+  width: 100%;
+  align-content: center;
+  background: #F1F4FE;
+  color: #4A41C5;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.sa .input-group{
+  margin-top: 0;
+}
+
+
+.sa .input-group input{
+  font-size: 2rem;
+  border: none;
+  color: #4A41C5;
+  padding: 15px 15px 15px 15px;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input[type="text"] {
+  padding-right: 2.5rem; /* Ajoutez un rembourrage à droite pour faire de la place à l'icône */
+}
+
+.input-with-icon .icon-label {
+  position: absolute;
+  right: 10px; /* Ajustez selon votre besoin */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.input-with-icon .icon-label i {
+  font-size: 2rem; /* Ajustez cette taille selon vos besoins */
+  color: #A2ADCF;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/* Style spécifique pour le deuxième input */
+.sa .input-group:nth-child(1) input{
+  color: #4A41C5;
+  font-size: bold;
+}
+
+/* Style spécifique pour le deuxième input */
+.sa .input-group:nth-child(2) input{
+  color: #000;
+  font-size: 20px;
+  height: 58px;
+}
+
+.sectio-container{
+  border-left: 8px solid #4A41C5;
+  width: 100%;
+  align-content: center;
+  background: #F1F4FE;
+  color: #4A41C5;
+  padding-right: 5%;
+  padding-left: 5%;
+  /* margin-top: 80px; */
+  margin-bottom: 40px;
+}
+
+.sectio-container .btnas-end{
+  position: relative;
+  top: 24px;
+  font-size: 1rem;
+}
+
+.file-inputa {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.file-inputa .eme {
+  padding: 7px;
+  font-size: 2rem; /* Ajustez cette valeur pour agrandir l'icône */
+
+}
+
+.file-inputa .eme label {
+  cursor: pointer;
+  color: #A2ADCF;
+}
+
+.sa-1 .input-group .textarea{
+  width: 75%;
+  margin-right: 15px;
+}
+
+.sa-1 .input-group textarea{
+  /* border: none; */
+  color: #4A41C5;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  border-color: #9f99ef;
+}
+
+.sa-1 .input-group textarea:is(:focus,:valid){
+  border-width: 2px;
+  border-color: #4A41C5;
+}
+
+.sa-1 .input-group textarea::-webkit-scrollbar{
+  width: 0px;
+}
+
+/* .sa-1 .input-group ol {
+  margin-bottom: 10px;
+  border: 1px solid #4A41C5;
+  border-radius: 50%;
+} */
+
+.bleu{
+  background-color: #4A41C5;
+  height: 15px;
+  margin-bottom: 15px;
+}
+
+.bleu-1{
+  color: #A2ADCF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bleu-2{
+  color: #A2ADCF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 90%;
+}
+
+.bleu-1 .enfant{
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 90%;
+  color: #293D7A;
+  padding-top: 15px;
+}
+
+
+.circle-list {
+  list-style: none; /* Supprimer le style de liste par défaut */
+  counter-reset: list-counter; /* Initialiser un compteur */
+  padding: 0;
+}
+
+.circle-list > li {
+  counter-increment: list-counter; /* Incrémenter le compteur pour chaque élément de liste */
+  margin-bottom: 10px; /* Ajouter un espace entre les éléments de la liste */
+  position: relative; /* Positionner de manière relative pour styliser le pseudo-élément */
+}
+
+.circle-list > li:before {
+  content: counter(list-counter, upper-alpha);
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 1.5em;
+  margin-right: 0.5em;
+  background-color: #fff;
+  color: #4A41C5;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  border:1px solid #4A41C5;
+}
+
+.circle-list ol {
+  list-style: none; /* Supprimer le style de liste par défaut pour les listes imbriquées */
+  counter-reset: list-counter;
+  padding: 0; 
+}
+
+.circle-list ol > li:before {
+  content: counter(list-counter, upper-alpha); /* Afficher la valeur du compteur en majuscules */
+  display: inline-block; /* Afficher comme un élément en ligne avec des dimensions de bloc */
+  width: 1.5em; /* Largeur du cercle */
+  height: 1.5em; /* Hauteur du cercle */
+  background-color: #fff; /* Couleur de fond du cercle */
+  color: #4A41C5; /* Couleur du texte à l'intérieur du cercle */
+  border-radius: 50%; /* Rendre la forme circulaire */
+  text-align: center; /* Centrer le texte à l'intérieur du cercle */
+  font-weight: bold; /* Facultatif : rendre le texte en gras */
+  text-transform: uppercase; /* S'assurer que les lettres sont en majuscules */
+  
+}
+.circle-list .heckbox-reponce{
+  margin: 15px;
+  margin-left: 0;
+  margin-top: 0;
+  width: 40%;
+  padding: 5px;
+  border: 0px;
+  line-height: 1.5em; /* Aligner le texte verticalement au centre */
+  margin-right: 0.5em; /* Ajouter un espace à droite du cercle */
+}
+
+.circle-list .point{
+  margin: 15px;
+  margin-left: 0;
+  margin-top: 0;
+  width: 7%;
+  padding: 5px;
+  border: 0px;
+  line-height: 1.5em; /* Aligner le texte verticalement au centre */
+  margin-right: 0.5em; /* Ajouter un espace à droite du cercle */
+}
+
+.circle-list select{
+border-radius: 0%;
+padding: 3px;
+}
+
+.circle-list1{
+  padding-left: 21px;
+
+}
+
+
+.add-response{
+  color: #A2ADCF;
+  text-decoration: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.add-response span{
+  color: #4A41C5;
+}
+
+.add-response input[type="radio"] {
+  border: solid#4A41C5;
+  margin-right: 13px;
+  width: 20px;
+  height: 20px;
+}
+
+
+

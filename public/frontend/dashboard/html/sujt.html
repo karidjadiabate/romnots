@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="sujt.css" />
+    <script src="script.js" defer></script>
+
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="heade">
+        <div class="bleu"></div>
+        <div class="bleu-1">
+            <div class="bleu-2">
+                <!-- <i class="fa-solid fa-circle-chevron-left"></i> -->
+                <div class="enfant">
+                    <h2>Création de sujet</h2>
+                    <hr />
+                </div>
+            </div>
+            <i class="fa-solid fa-circle-xmark fermeture" id="close-modal-btn"></i>
+        </div>
+        <!-- Progress bar -->
+        <div class="eme">
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+                <div class="progress-step progress-step-active">Informations</div>
+                <div class="progress-step">Questions</div>
+                <div class="progress-step">Finalisation</div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-xmark" id="fermetures"></i>
+            <h2>Quitter la page</h2>
+            <p>Voulez-vous vraiment quitté la page ??</p>
+            <div id="cool">
+                <input type="submit" value="Valider" class="btn-success">
+                <input type="reset" value="Annuler" class="btn-red" id="btn-red">
+            </div>
+        </div>
+    </div>
+
+    <form action="#" class="form" enctype="multipart/form-data">
+        <div class="form-step form-step-active">
+            <div class="wo">
+                <div class="input-group select-group">
+                    <label for="position" class="label">Type de sujet</label>
+                    <select name="position" id="position" class="select-effect-1" required>
+                        <option value="" disabled selected hidden>
+                            Choisissez le type de sujet
+                        </option>
+                        <option value="Manager">Manager</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                    <span class="border"></span>
+                    <div class="error-message" id="position-error" style="display: none; color: red;">Veuillez
+                        sélectionner un type de sujet.</div>
+                </div>
+                <div class="input-group select-group">
+                    <label for="position" class="label">Matière</label>
+                    <select name="position" id="positions" class="select-effect-1" required>
+                        <option value="" disabled selected hidden>
+                            Sélectionner la matière
+                        </option>
+                        <option value="Manager">Manager</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                    <span class="border"></span>
+                    <div class="error-message" id="positions-error" style="display: none; color: red;">Veuillez
+                        sélectionner une matière.</div>
+                </div>
+                <div class="input-group select-group">
+                    <label for="position" class="label">Filière</label>
+                    <select name="position" id="positions1" class="select-effect-1" required>
+                        <option value="" disabled selected hidden>
+                            Sélectionnez la Filière
+                        </option>
+                        <option value="Manager">Manager</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                    <span class="border"></span>
+                    <div class="error-message" id="positions1-error" style="display: none; color: red;">Veuillez
+                        sélectionner une filière.</div>
+                </div>
+                <div class="input-group select-group">
+                    <label for="position" class="label">Classe</label>
+                    <select name="position" id="positions2" class="select-effect-1" required>
+                        <option value="" disabled selected hidden>
+                            Sélectionnez la classe
+                        </option>
+                        <option value="Manager">Manager</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                    <span class="border"></span>
+                    <div class="error-message" id="positions2-error" style="display: none; color: red;">Veuillez
+                        sélectionner une classe.</div>
+                </div>
+                <div class="input-group time-group">
+                    <label for="time" class="label">Durée</label>
+                    <input type="text" name="time" id="time" class="time-effect-1" placeholder="hh:mm"
+                        onfocus="this.type='time'" onblur="this.type='time'" required />
+                    <span class="border"></span>
+                </div>
+            </div>
+
+            <div class="">
+                <a href="#" class="btn btn-next width-24 ml-auto" id="suivants">Suivant</a>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <div class="note-container">
+                <span>Note:</span>
+                <input type="number" class="note-value" placeholder="Entrez le nombre total de points *" />
+                <a class="valid-not">Valider</a>
+                <div class="error-message" id="error-message">Le champ ne peut pas être vide.</div>
+            </div>
+
+            <div class="frm" style="display: none">
+                <div class="sa">
+                    <div class="btnas-ends">
+                        <i class="fa-solid fa-x delete-questionnaires"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="phone" id="phone" placeholder="Sous titre 1" required />
+                    </div>
+                    <div class="input-group input-with-icon">
+                        <input type="text" name="email" id="preview" placeholder="Libellé du sous titre" required />
+                        <label for="file-input" class="icon-label"><i class="fa-regular fa-image"></i></label>
+                        <input type="file" id="file-input" class="file-input" data-preview="image-preview"
+                            data-result="preview" name="" style="display: none" />
+                        <img id="image-preview" alt="Aperçu de l'image" />
+
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="sectio-container">
+                        <div class="btnas-end">
+                            <!-- <i class="fa-solid fa-x delete-section"></i> -->
+                        </div>
+                        <div class="sa-1">
+                            <div class="questionnaire-container">
+                                <div class="input-group">
+                                    <div class="questionnaire">
+                                        <div class="input-group">
+                                            <div class="display-1">
+                                                <div class="textarea">
+                                                    <textarea name="" id="previews" required
+                                                        placeholder="Question"></textarea>
+                                                </div>
+                                                <div class="file-inputa">
+                                                    <div class="eme">
+                                                        <label for="fileinputs"><i
+                                                                class="fa-regular fa-image"></i></label>
+                                                        <input type="file" id="fileinputs" class="file-input"
+                                                            data-preview="imagepreviews" data-result="previews" name=""
+                                                            style="display: none" />
+                                                        <img id="imagepreviews" alt="Aperçu de l'image" />
+
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa-solid fa-xmark deletes delete-questionnaire"></i>
+                                                    </div>
+                                                    <!-- <i class="fa-solid fa-x  delete-section"></i> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <ol class="circle-list">
+                                                <li>
+                                                    <input type="text" class="heckbox-reponce" id="checkbox1" name=""
+                                                        required placeholder="reponse 1" />
+                                                    <label for="imagine"><i class="fa-regular fa-image"></i></label>
+                                                    <input type="file" id="imagine" class="file-input"
+                                                        data-preview="imaginations" name="" style="display: none" />
+                                                    <img id="imaginations" class="img" alt="" />
+                                                    <select name="" id="mySelect" class="Select">
+                                                        <option value="" disabled selected hidden>
+                                                            resultat
+                                                        </option>
+                                                        <option value="Manager" class="yellow" data-target="1">
+                                                            Mauvaise réponse
+                                                        </option>
+                                                        <option value="Managers" class="red" data-target="2">
+                                                            Mauvaise réponse(-)
+                                                        </option>
+                                                        <option value="Designer" class="green" data-target="3">
+                                                            Bonne réponse
+                                                        </option>
+                                                    </select>
+                                                    <input type="number" id="point" class="point" name="" required
+                                                        placeholder="not 1" />
+                                                    <i class="fa-regular fa-trash-can delete delete-btn"></i>
+                                                </li>
+                                            </ol>
+                                            <a class="add-response" href="#"><input type="radio" />
+                                                <p>
+                                                    Ajouter une autre proposition de réponse ou
+                                                    <span>ajouter '' Autre ''</span>
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="Ajouter-question"><i class="fa-solid fa-circle-plus"></i>Ajouter une
+                                question</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btns-end">
+                    <a href="#" class="Ajouter-section"> <i class="fa-solid fa-circle-plus"></i>Ajouter une section</a>
+                </div>
+
+                <div class="btns-group">
+                    <a href="#" class="btn-prev">Précédent</a>
+                    <a href="#" class="btn btn-next width-24">Suivant</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="btns-group">
+                <a href="#" class="btn-prev">Précédent</a>
+                <button type="submit" class="btn">Terminé</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <!-- JS  VALIDER-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let counters = {
+                section: 0,
+                question: 0,
+                response: 0,
+                image: 0,
+                file: 0
+            };
+
+            function getUniqueId(prefix) {
+                return `${prefix}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+            }
+
+            function handleSelectChanges(event) {
+                const selectElement = event.target;
+                const inputElement = selectElement.nextElementSibling;
+                const selectedOption = selectElement.options[selectElement.selectedIndex];
+                console.log("ID du select :", selectElement.id);
+                selectElement.classList.remove("yellow", "red", "green");
+
+                if (selectedOption) {
+                    if (selectedOption.className) {
+                        selectElement.classList.add(selectedOption.className);
+                    }
+
+                    if (inputElement) {
+                        inputElement.className = "";
+                        if (selectedOption.className) {
+                            inputElement.classList.add(selectedOption.className);
+                        }
+
+                        // Gérer la désactivation de l'input basé sur la valeur de l'option sélectionnée
+                        if (selectedOption.value === "Manager") {
+                            inputElement.disabled = true; // Désactiver l'input si la valeur est "Manager"
+                        } else {
+                            inputElement.disabled = false; // Activer l'input dans les autres cas
+                        }
+                    }
+                }
+            }
+
+            // Handle the 'Valider' button click
+            document.querySelector(".valid-not")?.addEventListener("click", function () {
+
+                var input = document.querySelector('.note-value');
+                var errorMessage = document.getElementById('error-message');
+
+                if (input.value.trim() === '') {
+                    event.preventDefault(); // Empêche l'action par défaut (si c'est un lien)
+                    errorMessage.style.display = 'block'; // Affiche le message d'erreur
+                    input.focus(); // Focalise sur le champ de texte
+                } else {
+                    errorMessage.style.display = 'none'; // Masque le message d'erreur si le champ n'est pas vide
+                    const noteValue = document.querySelector(".note-value").value;
+
+                    // Show the frm div
+                    const frm = document.querySelector(".frm");
+                    if (frm) {
+                        frm.style.display = "block";
+                        input.disabled = true;
+                    }
+
+                    // Change the "Valider" button to "Edit"
+                    this.classList.remove("valid-not");
+                    this.classList.add("edit-button");
+                    this.id = 'edit-buttons';
+                    this.innerHTML = '<i class="fa-solid fa-pen-to-square" id="square"></i>';
+
+                    // Set the note value in the second input (if exists)
+                    const frmNoteInput = document.querySelector(".frm .note-value");
+                    if (frmNoteInput) {
+                        frmNoteInput.value = noteValue;
+                    }
+                    document.getElementById('edit-buttons').addEventListener("click", function () {
+                        const frmNoteInputs = document.querySelector(".note-value");
+                        frmNoteInputs.disabled = false; // Enable the input field
+                        frmNoteInputs.focus();
+                    });
+                }
+            });
+
+
+            document.querySelectorAll(".sectio-container").forEach(attachAllEvents);
+        });
+
+    </script>
+
+
+</body>
+
+</html>

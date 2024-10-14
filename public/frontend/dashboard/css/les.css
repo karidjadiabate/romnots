@@ -1,0 +1,125 @@
+/* Custom styles for specific elements */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-group-text input {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 100%;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+
+}
+
+.table-aaa .aa th {
+    background-color: #F1F4FE;
+    color: #293D7A;
+}
+
+.fa-filter {
+    color: #A2ADCF;
+}
+
+.modal-content {
+    border-radius: 0%;
+}
+
+.modal-content p {
+    font-size: 10px;
+
+}
+
+.btn-danger {
+    border-radius: 0%;
+}
+
+.btn-secondary,
+.btn-success {
+    border-radius: 0%;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+#sure {
+    font-size: 14px;
+    color: darkgray;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #293D7A;
+    color: white;
+}
+
+.btn-outline-primary {
+    border: none;
+    background-color: #EEF0F9;
+    border-radius: 50%;
+    color: #4A41C5;
+}
+
+#noResults {
+    display: none;
+    color: red;
+    margin-top: 10px;
+}
+
+.option {
+    margin-left: 100px
+}
+
+/* .modal.fa-triangle-exclamation {
+    color: #ffca0a;
+    height: 150;
+    width: 150;
+} */
+
+/* Responsive adjustments */
+
+
+
+@media (max-width: 768px) {
+    .option {
+        width: 100%;
+        margin-left: 50%;
+    }
+
+}

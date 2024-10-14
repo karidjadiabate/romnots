@@ -1,0 +1,559 @@
+* {
+    font-family: "poppins", sans-serif;
+}
+
+.titre {
+    color: #293d7a;
+    margin-top: 5%;
+}
+
+.containers {
+    margin-left: 7%;
+
+}
+
+#apparence_accessibilite {
+    color: #4A41C5;
+    text-align: left;
+
+}
+
+#icone {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    color: #4A41C5;
+    margin-bottom: 5%;
+    cursor: pointer;
+    width: 100%;
+}
+
+#profils {
+    display: none;
+    color: #4A41C5;
+    flex-direction: column;
+
+}
+
+#profil span {
+    font-size: 20px;
+    margin-right: 5px
+}
+
+#profil span:hover {
+    color: #4A41C5;
+}
+
+#ensemble_profil span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#profils span:hover {
+    color: #4A41C5;
+    cursor: pointer;
+}
+
+.gerer span {
+    font-size: 1em;
+}
+
+.gerer span:hover {
+    color: #4A41C5;
+}
+
+#paramet i {
+    font-size: 26px;
+    margin-right: 5px
+}
+
+
+
+#ensemble_profil {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    width: 100%;
+}
+
+.fa-upload {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+}
+
+#ensemble_profil1 {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    /* width: 10%; */
+}
+
+#ensemble_profil12 {
+    display: flex;
+}
+
+#ensemble_profil2 {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    /* width: 10%; */
+}
+
+#ensemble_profil22 {
+    display: none;
+}
+
+#theme_application {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+#theme_clair {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+}
+
+#theme_defaut {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+}
+
+#theme_sombre {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: center;
+}
+
+#sauvegarde {
+    background: #38b293;
+    color: #fff;
+    border: #38b293;
+    font-size: 20px;
+    position: absolute;
+    right: 8%;
+    width: 230px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#parametsupplementaire {
+    display: none;
+    color: #4A41C5;
+
+}
+
+
+
+.trait {
+    width: 90%;
+    border: 1px solid #918dc6;
+}
+
+.traits {
+    width: 90%;
+    border: 1px solid #4A41C5;
+}
+
+/* .container {
+    margin-top: 5%;
+} */
+
+.stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    margin-top: 15px;
+}
+
+#theme_application span {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.stackt {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3.5rem;
+    margin-top: 15px;
+}
+
+.stacks {
+    color: #293d7a;
+}
+
+.champ {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-top: 2%
+        /* position: absolute; */
+        /* right: 0; */
+}
+
+input[type='text'] {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #4A41C5;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #4A41C5;
+    margin-left: 35px;
+}
+
+input[type='tel'] {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #4A41C5;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #4A41C5;
+    margin-left: 35px;
+}
+
+input[type='email'] {
+    width: 90%;
+    height: 50px;
+    border: 1px solid #4A41C5;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #4A41C5;
+    margin-left: 35px;
+}
+
+textarea {
+    width: 90%;
+    border: 1px solid #4A41C5;
+    border-radius: 4px;
+    padding-left: 10px;
+    height: 100px;
+    color: #4A41C5;
+    margin-left: 35px;
+
+}
+
+::placeholder {
+    color: #ABA6F3;
+}
+
+#traitement {
+    margin-bottom: 10px;
+}
+
+#option1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#option2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#option3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#option1_enseignant {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option1_etudiant {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option1_matiere {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option2_filiere {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option2_classe {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+.fa-toggle-on {
+    color: #4a41c5;
+    cursor: pointer;
+}
+
+#option2_c {
+    display: flex;
+    /* justify-content: flex-end;  */
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option3_c {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option3_sujet {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+#option3_ {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: 2px solid #4A41C5;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: -30px;
+    appearance: none;
+    outline: none;
+    position: relative;
+
+}
+
+
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: #4A41C5;
+    position: absolute;
+    top: -7px;
+    left: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type='checkbox']:checked {
+    background: #e8eaed !important;
+    border: 1px solid #4A41C5;
+    appearance: #4A41C5;
+}
+
+label {
+    margin-left: 30px;
+}
+
+.red-color {
+    color: #b5b5ba !important;
+    transform: rotate(180deg);
+    display: inline-block;
+    /* Assure que la rotation fonctionne correctement */
+
+}
+
+#red_color8 {
+    display: flex;
+}
+
+#green_color8 {
+    display: none;
+}
+
+#red_color7 {
+    display: flex;
+}
+
+#green_color7 {
+    display: none;
+}
+
+#red_color6 {
+    display: flex;
+}
+
+#green_color6 {
+    display: none;
+}
+
+#red_color5 {
+    display: flex;
+}
+
+#green_color5 {
+    display: none;
+}
+
+#red_color4 {
+    display: flex;
+}
+
+#green_color4 {
+    display: none;
+}
+
+#red_color3 {
+    display: flex;
+}
+
+#green_color3 {
+    display: none;
+}
+
+#red_color2 {
+    display: flex;
+}
+
+#green_color2 {
+    display: none;
+}
+
+#red_color1 {
+    display: flex;
+}
+
+#green_color1 {
+    display: none;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox-containers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -28px;
+}
+
+.fa-trash-can {
+    color: red;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+caption {
+    font-style: italic;
+    margin-bottom: .5rem;
+}
+
+thead {
+    background-color: #f1f4fe;
+}
+
+tbody {
+    background-color: #FFF;
+}
+
+th,
+td {
+    padding: .5rem;
+    text-align: center;
+}
+
+.data2 {
+    text-align: left;
+}
+
+#vue_profil {
+    display: none;
+}
+
+table {
+    margin-top: 30px;
+}
+
+.affichage {
+    display: flex;
+    flex-direction: row;
+}
+
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ad1515;
+    transition: width 0.3s;
+}
+
+.solid_distance {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 20px;
+    background: #f1f4fe;
+
+}
+
+.solid_distances {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 20px;
+    background: #f1f4fe;
+
+}
+
+
+/*  */
+
+
+@media screen and (min-width: 200px) and (max-width: 912px) {}
+
+
+@media screen and (min-width: 912px) and (max-width: 1300px) {}
+
+@media screen and (max-width: 600px) {}

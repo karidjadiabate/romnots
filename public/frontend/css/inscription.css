@@ -1,0 +1,145 @@
+/* CSS pour la div qui prend tout le body */
+.full-screen-div {
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100%;
+    padding: 30px;
+    position: relative;
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #38B293;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #4a3dbb;
+}
+
+#btnRetour {
+    font-size: 19px;
+    border-radius: 0%;
+    margin-top: 20px;
+    width: 160px;
+    height: 50px;
+    background-color: #38B293;
+}
+
+#btnRetour:hover {
+    background-color: #4a3dbb;
+}
+
+.registration {
+    text-align: center;
+    padding: 50px;
+}
+
+.form-control-underline {
+    border: none;
+    border-bottom: 2px solid #4a3dbb;
+    margin-top: 40px;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-control-underline:focus {
+    box-shadow: none;
+    border-bottom-color: #4a3dbb;
+}
+
+.row .form-group {
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #4a4aa6;
+    border-color: #4a4aa6;
+    font-size: 1.2rem;
+    height: 45px;
+    border-radius: 0%;
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-primary:hover {
+    background-color: #38B293;
+    border-color: #38B293;
+}
+
+#password::placeholder,
+#email::placeholder,
+#firstName::placeholder,
+#lastName::placeholder,
+#contact::placeholder,
+#schoolName::placeholder,
+#schoolAddress::placeholder,
+#confirmPassword::placeholder {
+    color: #4a3dbb;
+}
+
+#password,
+#email,
+#firstName,
+#lastName,
+#contact,
+#schoolName,
+#schoolAddress,
+#confirmPassword {
+    margin-top: 30px;
+}
+
+input {
+    font-family: "Poppins", sans-serif;
+}
+
+.form-group {
+    color: #4a3dbb;
+}
+
+.form-group a {
+    color: #4a3dbb;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Pour désactiver la couleur de fond bleue */
+input.form-control:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill {
+    background-color: white !important;
+    color: #4a3dbb !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.form-check-input:checked {
+    background-color: #38B293;
+    border-color: #38B293;
+}
+
+.form-check-input:active {
+    box-shadow: none;
+}
+
+.form-check-input {
+    border: 2px solid #4a3dbb;
+}
+
+/* Pour le message d'erreur */
+.is-invalid {
+    border-color: red;
+}
+
+.invalid-feedback {
+    color: red;
+}
