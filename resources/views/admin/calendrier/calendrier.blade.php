@@ -233,9 +233,9 @@
             $('#calendar').fullCalendar({
                 locale: 'fr',
                 header: {
-                    left: 'createButton', // Le bouton "Créer" à gauche
-                    center: 'searchBar title ', // La barre de recherche suivie du titre centré
-                    right: 'agendaDay,agendaWeek,month prev,next' // Les boutons "Jour", "Semaine", "Mois", et "Précédent", "Suivant" à droite
+                    left: 'createButton',
+                    center: 'searchBar title ',
+                    right: 'agendaDay,agendaWeek,month prev,next'
                 },
                 customButtons: {
                     createButton: {
